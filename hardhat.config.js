@@ -1,4 +1,8 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config({
+  path: `./.env${process.env.ENV ? "." + process.env.ENV : ""}`,
+});
+require("@nomiclabs/hardhat-solhint");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
